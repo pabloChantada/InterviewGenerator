@@ -205,18 +205,28 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
-.DS_Store/
 
-/src/database/train-v1.1.json
-/src/database/dev-v1.1.json
-/src/database/chroma_db_*/
-/src/database/chroma_db/
+# macOS
+.DS_Store
+
+# Datos descomprimidos e indices vectoriales generados
+/data/train-v1.1.json
+/data/dev-v1.1.json
+/data/chroma_db_*/
+/data/chroma_db/
+
+# Redis
 dump.rdb
+
+# Graficas generadas por docs/report/graphs.py
 /evaluacion_piechart.png
-/report/main.aux
-/report/main.fdb_latexmk
-/report/main.fls
-/report/main.log
-/report/main.out
-/report/main.synctex.gz
-/report/main.toc
+/evolucion_dificultad.png
+
+# Artefactos de compilacion de LaTeX
+/docs/report/main.aux
+/docs/report/main.fdb_latexmk
+/docs/report/main.fls
+/docs/report/main.log
+/docs/report/main.out
+/docs/report/main.synctex.gz
+/docs/report/main.toc

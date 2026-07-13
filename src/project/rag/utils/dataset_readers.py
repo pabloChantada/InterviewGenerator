@@ -1,5 +1,15 @@
+import os
+
 import numpy as np
 from datasets import load_dataset
+
+# Raiz del repositorio: src/project/rag/utils/dataset_readers.py -> utils -> rag -> project -> src -> raiz
+BASE_DIR = os.path.dirname(
+    os.path.dirname(
+        os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    )
+)
+COACHQUANT_PATH = os.path.join(BASE_DIR, "data", "coachquant_all.jsonl")
 
 '''
 NOTA: Aqui solo usamos el SQUAD y Coachquant en la version final. Pero dejamos los otros readers
@@ -249,7 +259,7 @@ def reader_hotpotqa(
     return _process_qa_texts(qa_texts, max_texts, sample_random, verbose)
 
 def reader_coachquant(
-    data_path: str = "src/database/coachquant_all.jsonl",
+    data_path: str = COACHQUANT_PATH,
     max_texts: int | None = None,
     sample_random: bool = False,
     verbose: bool = True,

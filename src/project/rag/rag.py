@@ -16,8 +16,11 @@ from .utils.dataset_readers import (
 
 load_dotenv()
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-DB_DIR = os.path.join(BASE_DIR, "database")
+# Raiz del repositorio: src/project/rag/rag.py -> rag -> project -> src -> raiz
+BASE_DIR = os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+)
+DB_DIR = os.path.join(BASE_DIR, "data")
 
 
 class RAG:
