@@ -38,8 +38,16 @@
     numbersep=5pt,                  
     showspaces=false,                
     showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
+    showtabs=false,
+    tabsize=2,
+    % listings no digiere UTF-8 por si solo: mapeamos los acentos usados en los ejemplos
+    extendedchars=true,
+    inputencoding=utf8,
+    literate=%
+      {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+      {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+      {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {ü}{{\"u}}1 {Ü}{{\"U}}1
+      {¿}{{?`}}1 {¡}{{!`}}1
 }
 \lstset{style=mystyle}
 
@@ -61,22 +69,16 @@
     
     \vspace{3cm}
     
-    \textbf{Autores:} \par
-    \begin{itemize}
-        \item Pablo Chantada Saborido (Portavoz) \\
-        \textit{Login:} pablo.chantada \quad \textit{Email:} pablo.chantada@udc.es
-        
-        \item Guillermo García Engelmo \\
-        \textit{Login:} g.garcia2 \quad \textit{Email:} g.garcia2@udc.es
-        
-        \item Héctor Aldao Amoedo \\
-        \textit{Login:} hector.aldao \quad \textit{Email:} hector.aldao@udc.es
-    \end{itemize}
+    \textbf{Autor:} \par
+    \vspace{0.3cm}
+    {\large Pablo Chantada Saborido \par}
+    \textit{Login:} pablo.chantada \quad \textit{Email:} pablo.chantada@udc.es
     \vspace{0.5cm}
     
     \vfill
     
-    {\large \today \par} % Fecha actual
+    % Fecha de entrega fijada: evita que una recompilacion posterior la desplace
+    {\large 19 de diciembre de 2025 \par}
 \end{titlepage}
 
 % -------------------------------------------------------------------
@@ -459,10 +461,10 @@ La arquitectura de \textit{Interview Generator} se fundamenta en componentes de 
 %% ========================================
 
 \bibitem{openai2023gpt4}
-Achiam, J., Adler, S., Agarwal, S., Ahmad, L., Akkaya, I., Aleman, F. L., ... & McGrew, B. (2023). Gpt-4 technical report. arXiv preprint arXiv:2303.08774.
+Achiam, J., Adler, S., Agarwal, S., Ahmad, L., Akkaya, I., Aleman, F. L., ... \& McGrew, B. (2023). Gpt-4 technical report. arXiv preprint arXiv:2303.08774.
 
 \bibitem{gemini2023}
-Team, G., Anil, R., Borgeaud, S., Alayrac, J. B., Yu, J., Soricut, R., ... & Blanco, L. (2023). Gemini: a family of highly capable multimodal models. arXiv preprint arXiv:2312.11805.
+Team, G., Anil, R., Borgeaud, S., Alayrac, J. B., Yu, J., Soricut, R., ... \& Blanco, L. (2023). Gemini: a family of highly capable multimodal models. arXiv preprint arXiv:2312.11805.
 
 \bibitem{geminiRag}
 Google.
@@ -472,7 +474,7 @@ Google.
 
 
 \bibitem{opus}
-Martínez, A. L., Cano, A., & Ruiz-Martínez, A. (2025). Generative artificial intelligence-supported pentesting: a comparison between claude opus, gpt-4, and copilot. arXiv preprint arXiv:2501.06963.
+Martínez, A. L., Cano, A., \& Ruiz-Martínez, A. (2025). Generative artificial intelligence-supported pentesting: a comparison between claude opus, gpt-4, and copilot. arXiv preprint arXiv:2501.06963.
 
 \bibitem{groq2024}
 {Groq Inc.}
@@ -503,17 +505,17 @@ Llama model family and hardware requirements.
 
 
 \bibitem{cot}
-Emmons, S., Jenner, E., Elson, D. K., Saurous, R. A., Rajamanoharan, S., Chen, H., ... & Shah, R. (2025). When chain of thought is necessary, language models struggle to evade monitors. arXiv preprint arXiv:2507.05246.
+Emmons, S., Jenner, E., Elson, D. K., Saurous, R. A., Rajamanoharan, S., Chen, H., ... \& Shah, R. (2025). When chain of thought is necessary, language models struggle to evade monitors. arXiv preprint arXiv:2507.05246.
 
 \bibitem{rags}
-Es, S., James, J., Anke, L. E., & Schockaert, S. (2024, March). Ragas: Automated evaluation of retrieval augmented generation. In Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics: System Demonstrations (pp. 150-158).
+Es, S., James, J., Anke, L. E., \& Schockaert, S. (2024, March). Ragas: Automated evaluation of retrieval augmented generation. In Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics: System Demonstrations (pp. 150-158).
 
 %% ========================================
 %% DATASETS Y BENCHMARKS
 %% ========================================
 
 \bibitem{squad}
-Rajpurkar, P., Zhang, J., Lopyrev, K., & Liang, P. (2016). Squad: 100,000+ questions for machine comprehension of text. arXiv preprint arXiv:1606.05250.
+Rajpurkar, P., Zhang, J., Lopyrev, K., \& Liang, P. (2016). Squad: 100,000+ questions for machine comprehension of text. arXiv preprint arXiv:1606.05250.
 
 \bibitem{coachquant2025}
 CoachQuant.
@@ -526,10 +528,10 @@ CoachQuant.
 %% ========================================
 
 \bibitem{bertscore}
-Zhang, T., Kishore, V., Wu, F., Weinberger, K. Q., & Artzi, Y. (2019). Bertscore: Evaluating text generation with bert. arXiv preprint arXiv:1904.09675.
+Zhang, T., Kishore, V., Wu, F., Weinberger, K. Q., \& Artzi, Y. (2019). Bertscore: Evaluating text generation with bert. arXiv preprint arXiv:1904.09675.
 
 \bibitem{sympy}
-Meurer, A., Smith, C. P., Paprocki, M., Čertík, O., Kirpichev, S. B., Rocklin, M., ... & Scopatz, A. (2017). SymPy: symbolic computing in Python. PeerJ Computer Science, 3, e103.
+Meurer, A., Smith, C. P., Paprocki, M., Čertík, O., Kirpichev, S. B., Rocklin, M., ... \& Scopatz, A. (2017). SymPy: symbolic computing in Python. PeerJ Computer Science, 3, e103.
 
 
 %% ========================================
@@ -537,7 +539,7 @@ Meurer, A., Smith, C. P., Paprocki, M., Čertík, O., Kirpichev, S. B., Rocklin,
 %% ========================================
 
 \bibitem{sentencebert}
-Reimers, N., & Gurevych, I. (2019). Sentence-bert: Sentence embeddings using siamese bert-networks. arXiv preprint arXiv:1908.10084.
+Reimers, N., \& Gurevych, I. (2019). Sentence-bert: Sentence embeddings using siamese bert-networks. arXiv preprint arXiv:1908.10084.
 
 \bibitem{reimers2019sentencetransformers}
 Nils Reimers and Iryna Gurevych.
