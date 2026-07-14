@@ -20,7 +20,7 @@
 
 ## Qué es
 
-La mayoría de sistemas de preguntas y respuestas se limitan a comparar tu texto con la solución. **Interview Generator** no: descompone cada respuesta en cuatro dimensiones medibles, calcula una nota global y usa esa nota para decidir **qué pregunta te toca después**.
+La mayoría de sistemas de preguntas y respuestas se limitan a comparar tu texto con la solución. **Interview Generator** descompone cada respuesta en cuatro dimensiones medibles, calcula una nota global y usa esa nota para decidir **qué pregunta te toca después**.
 
 El resultado es un entorno de práctica que se adapta: si dominas el tema, sube de nivel; si te atascas, baja y refuerza.
 
@@ -65,10 +65,6 @@ Así se evitan los saltos bruscos que provocaba una única respuesta buena o mal
 ## Cómo funciona
 
 Backend **FastAPI** con tres capas: frontend ligero (Jinja2 + JS), servicios de generación y evaluación, y **Redis** como almacén de estado de sesión.
-
-<p align="center">
-  <img src="docs/report/diagrams/arquitecture.drawio.png" width="85%" alt="Diagrama de arquitectura del sistema" />
-</p>
 
 El ciclo de vida de una pregunta:
 
@@ -162,11 +158,9 @@ src/project/
 
 ## Memoria
 
-El análisis completo — decisiones de diseño, modelos descartados (DialoGPT, Qwen, BERT multilingüe, Llama), el problema de latencia que llevó a las tareas en segundo plano y el trabajo futuro — está en la memoria del proyecto:
-
-📄 [**docs/report/main.pdf**](docs/report/main.pdf)
+El análisis completo, decisiones de diseño, modelos descartados (DialoGPT, Qwen, BERT multilingüe, Llama), el problema de latencia que llevó a las tareas en segundo plano y el trabajo futuro está en la memoria del proyecto: [**docs/report/main.pdf**](docs/report/main.pdf)
 
 ## Autor
 
-**Pablo Chantada Saborido** — [pablo.chantada@udc.es](mailto:pablo.chantada@udc.es)
+**Pablo Chantada Saborido** — [pablochantadasaborido@gmail.com](mailto:pablochantadasaborido@gmail.com)
 Técnicas Avanzadas de Procesamiento de Lenguaje Natural · Universidade da Coruña
